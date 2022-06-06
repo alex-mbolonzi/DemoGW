@@ -4,7 +4,6 @@ application {
     applicationType monolith,
     authenticationType jwt,
     baseName demogw,
-    blueprints [],
     buildTool maven,
     cacheProvider ehcache,
     clientFramework angularX,
@@ -14,11 +13,9 @@ application {
     databaseType sql,
     devDatabaseType mysql,
     dtoSuffix DTO,
-    enableGradleEnterprise false,
     enableHibernateCache false,
     enableSwaggerCodegen true,
     enableTranslation false,
-    entitySuffix,
     jhiPrefix jhi,
     languages [en, fr],
     messageBroker false,
@@ -29,25 +26,23 @@ application {
     searchEngine false,
     serverPort 8080,
     serviceDiscoveryType no,
-    skipFakeData false,
     skipUserManagement false,
     testFrameworks [cypress, gatling, cucumber],
-    websocket false,
-    withAdminUi true
+    websocket false
   }
   entities *
 }
 
 entity Author {
-	name String,
-    birthDate LocalDate
+	name String required,
+  birthDate LocalDate
 }
 
 entity Book {
-	title String,
-    description String,
-    publicationDate LocalDate,
-    price BigDecimal
+	title String required,
+  description String,
+  publicationDate LocalDate,
+  price BigDecimal
 }
 
 relationship OneToMany {
