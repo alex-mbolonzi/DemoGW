@@ -50,5 +50,5 @@ relationship OneToMany {
 }
 
 dto * with mapstruct
-service * with serviceImpl
+service * with serviceClass
 paginate * with pagination
