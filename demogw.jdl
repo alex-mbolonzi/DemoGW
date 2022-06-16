@@ -20,7 +20,7 @@ application {
     gradleEnterpriseHost ""
     jhiPrefix jhi
     jhipsterVersion "7.8.1"
-    jwtSecretKey "MDY2MGMwZjJjZWIyNzNhYWQxYmI2OGE5ZGI1OGQ5NWVkMzBkZDkxMmMyMWNkMGVhMjU2Zjc0NThjZmJlNGFmMGM1NWY2M2Y5ZmU2ZDMwMzllZDQzZWY4NTA1NTM1ZmU0YmNmNDJjMDhlOTMxMDg1NGU0YzA1MDk1MWRhODdmZWE="
+    jwtSecretKey ""
     languages [en, fr]
     messageBroker false
     nativeLanguage en
