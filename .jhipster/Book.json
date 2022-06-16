@@ -1,10 +1,14 @@
 {
+  "applications": ["demogw"],
   "changelogDate": "20220521085246",
   "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "book",
   "fields": [
     {
       "fieldName": "title",
-      "fieldType": "String"
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
     },
     {
       "fieldName": "description",
@@ -19,7 +23,8 @@
       "fieldType": "BigDecimal"
     }
   ],
-  "jpaMetamodelFiltering": true,
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
   "name": "Book",
   "pagination": "pagination",
   "readOnly": false,
@@ -27,9 +32,10 @@
     {
       "otherEntityField": "name",
       "otherEntityName": "author",
-      "relationshipName": "authorBook",
+      "otherEntityRelationshipName": "book",
+      "relationshipName": "author",
       "relationshipType": "many-to-one"
     }
   ],
-  "service": "serviceImpl"
+  "service": "serviceClass"
 }

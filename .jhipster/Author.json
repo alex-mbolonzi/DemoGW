@@ -1,20 +1,32 @@
 {
+  "applications": ["demogw"],
   "changelogDate": "20220521084447",
   "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "author",
   "fields": [
     {
       "fieldName": "name",
-      "fieldType": "String"
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
     },
     {
       "fieldName": "birthDate",
       "fieldType": "LocalDate"
     }
   ],
-  "jpaMetamodelFiltering": true,
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
   "name": "Author",
   "pagination": "pagination",
   "readOnly": false,
-  "relationships": [],
-  "service": "serviceImpl"
+  "relationships": [
+    {
+      "otherEntityName": "book",
+      "otherEntityRelationshipName": "author",
+      "relationshipName": "book",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "serviceClass"
 }
